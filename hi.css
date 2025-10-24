@@ -3,7 +3,10 @@
    =============================== */
 body {
   background-color: #191919; /* Fondo oscuro principal */
-  font-family: 'Open Sans', sans-serif; /* Fuente base */
+  font-family:  "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal; /* Fuente base */
 }
 
 /* ===============================
@@ -13,19 +16,49 @@ body {
   opacity: 0; /* Oculto inicialmente */
   position: absolute;
   z-index: 7;
-  text-align: left;
-  margin: -50px 0 0 -150px;
-  width: 300px;
-  height: 100px;
+  color: #fff;
+  text-align: center; /* Centramos el texto */
   top: 50%;
   left: 50%;
-  font-size: 48px;
+  transform: translate(-50%, -50%); /* Centrado real */
+  width: 80%;
+  max-width: 400px; /* Evita que se estire demasiado */
+  height: auto;
+  font-size: 3rem; /* Tamaño base del texto */
   font-weight: 700;
 
   /* Aparece con una animación de opacidad */
   -webkit-animation: on .6s ease-in-out 3.7s forwards;
   animation: on .6s ease-in-out 3.7s forwards;
 }
+
+/* ===============================
+   📱 Media Queries Responsivas
+   =============================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 992px) {
+  .text {
+    font-size: 2.2rem;
+    width: 85%;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .text {
+    font-size: 1.6rem;
+    width: 90%;
+  }
+}
+
+/* Celulares muy pequeños */
+@media (max-width: 400px) {
+  .text {
+    font-size: 1.3rem;
+  }
+}
+
 
 /* Líneas de texto animadas como máquina de escribir */
 .text p {
@@ -45,10 +78,15 @@ body {
 /* Botón con animación de aparición y efecto hover */
 .text button {
   border: 0;
+  font-family:   "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
   opacity: 0;
-  background: #191919;
+  background: #ffffff;
   color: #2B5537;
-  border: 1px solid #191919;
+  border: 1px solid #ffffff;
+border-radius: 5%;
   letter-spacing: 2px;
   padding: .5rem 2.5rem;
   font-size: 12px;
@@ -65,8 +103,8 @@ body {
 
 .text button:hover {
   background: #2B5537;
-  color: #191919;
-  border: 1px solid #191919;
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 /* ===============================
@@ -84,16 +122,16 @@ body {
 /* Logotipo centrado con animación de aparición/desvanecimiento */
 .splash_logo {
   position: absolute;
-  margin: -15px 0 0 -25px;
-  top: 50vh;
-  left: 50vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* ✅ Centrado real */
   z-index: 5;
-  width: 50px;
-  height: 30px;
+  width: 70px;
+  height: 50px;
   text-align: center;
   font-size: 26px;
   font-weight: 600;
-  color: #fff;
+  color: #ffffff;
   opacity: 1;
   will-change: opacity;
   animation: logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards;
@@ -130,6 +168,7 @@ body {
   width: 100%;
   height: 100%;
   fill: #2B5537;
+  border-radius: 10%;
   stroke: 0;
   clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
   animation: expand .7s ease-in forwards 2.7s;
@@ -224,7 +263,7 @@ body {
   0% {}
   25% {
     clip-path: polygon(0vw 0vh, 55vw 40vh, 55vw 58vh, 45vw 58vh);
-    fill: white;
+    fill: #4FAC4F;
   }
   50% {
     clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 60vh, 45vw 60vh);
@@ -232,7 +271,7 @@ body {
   }
   75% {
     clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 60vh, 0vw 100vh);
-    fill: white;
+    fill: #4FAC4F;
   }
   100% {
     clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh);
