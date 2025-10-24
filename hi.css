@@ -1,10 +1,16 @@
+/* ===============================
+   🎨 CONFIGURACIÓN GENERAL
+   =============================== */
 body {
-  background-color: #191919;
-  font-family: 'Open Sans', sans-serif;
+  background-color: #191919; /* Fondo oscuro principal */
+  font-family: 'Open Sans', sans-serif; /* Fuente base */
 }
 
+/* ===============================
+   ✨ TEXTO CENTRAL Y ANIMACIONES
+   =============================== */
 .text {
-  opacity: 0;
+  opacity: 0; /* Oculto inicialmente */
   position: absolute;
   z-index: 7;
   text-align: left;
@@ -15,34 +21,33 @@ body {
   left: 50%;
   font-size: 48px;
   font-weight: 700;
+
+  /* Aparece con una animación de opacidad */
   -webkit-animation: on .6s ease-in-out 3.7s forwards;
-  -moz-animation: on .6s ease-in-out 3.7s forwards;
-  -o-animation: on .6s ease-in-out 3.7s forwards;
   animation: on .6s ease-in-out 3.7s forwards;
 }
 
+/* Líneas de texto animadas como máquina de escribir */
 .text p {
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
   -webkit-animation: type .3s steps(60, end) 3.7s;
-  -moz-animation: type .3s steps(60, end) 3.7s;
-  -o-animation: type .3s steps(60, end) 3.7s;
   animation: type .3s steps(60, end) 3.7s;
 }
 
+/* Segunda línea del texto, con una animación diferente */
 .text p:nth-child(2) {
   -webkit-animation: type2 .5s steps(60, end) 3.7s;
-  -moz-animation: type2 .5s steps(60, end) 3.7s;
-  -o-animation: type2 .5s steps(60, end) 3.7s;
   animation: type2 .5s steps(60, end) 3.7s;
 }
 
+/* Botón con animación de aparición y efecto hover */
 .text button {
   border: 0;
   opacity: 0;
   background: #191919;
-  color: #f5d300;
+  color: #2B5537;
   border: 1px solid #191919;
   letter-spacing: 2px;
   padding: .5rem 2.5rem;
@@ -50,23 +55,23 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-  -webkit-transition: color .5s, background-color .5s;
-  -moz-transition: color .5s, background-color .5s;
-  -ms-transition: color .5s, background-color .5s;
-  -o-transition: color .5s, background-color .5s;
+
+  /* Transiciones suaves de color */
   transition: color .5s, background-color .5s;
-  -webkit-animation: on .6s ease-in-out 4s forwards;
-  -moz-animation: on .6s ease-in-out 4s forwards;
-  -o-animation: on .6s ease-in-out 4s forwards;
+
+  /* Animación para que aparezca luego del texto */
   animation: on .6s ease-in-out 4s forwards;
 }
 
 .text button:hover {
-  background: #f5d300;
+  background: #2B5537;
   color: #191919;
   border: 1px solid #191919;
 }
 
+/* ===============================
+   💧 ANIMACIÓN DE PANTALLA INICIAL (SPLASH)
+   =============================== */
 .splash {
   width: 100vw;
   height: 100vh;
@@ -76,6 +81,7 @@ body {
   overflow: hidden;
 }
 
+/* Logotipo centrado con animación de aparición/desvanecimiento */
 .splash_logo {
   position: absolute;
   margin: -15px 0 0 -25px;
@@ -90,14 +96,10 @@ body {
   color: #fff;
   opacity: 1;
   will-change: opacity;
-  -webkit-animation: logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards;
-  -moz-animation: logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards;
-  -o-animation: logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards;
   animation: logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards;
 }
 
-.splash_logo:before,
-
+/* Líneas decorativas del logotipo */
 
 .splash_logo:before {
   bottom: -5px;
@@ -108,6 +110,7 @@ body {
   will-change: width;
 }
 
+/* SVG central del splash */
 .splash_svg {
   position: relative;
   margin: auto;
@@ -115,22 +118,24 @@ body {
   height: 100%;
 }
 
+/* Configuración base del SVG */
 .splash_svg svg {
   width: 100%;
   height: 100%;
   backface-visibility: visible;
 }
 
+/* Cuadro amarillo animado que se expande */
 .splash_svg rect {
   width: 100%;
   height: 100%;
-  fill: #f5d300;
+  fill: #2B5537;
   stroke: 0;
   clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
-  -webkit-animation: expand .7s ease-in forwards 2.7s;
   animation: expand .7s ease-in forwards 2.7s;
 }
 
+/* Capa superior que cubre y revela el contenido */
 .splash_minimize {
   position: absolute;
   margin: auto;
@@ -147,50 +152,61 @@ body {
   backface-visibility: visible;
 }
 
+/* Rectángulo que se encoge y desaparece */
 .splash_minimize rect {
   width: 100%;
   height: 100%;
   clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh);
-  -webkit-animation: scale .2s ease-out forwards 1s, hide 1.3s ease-out forwards 1.2s;
   animation: scale .2s ease-out forwards 1s, hide 1.3s ease-out forwards 1.2s;
 }
 
+/* ===============================
+   🔁 ANIMACIONES CLAVE (KEYFRAMES)
+   =============================== */
+
+/* Escala el rectángulo hasta el centro */
 @keyframes scale {
   100% {
     clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
   }
 }
 
+/* Oculta el rectángulo */
 @keyframes hide {
   100% {
     fill: transparent;
   }
 }
 
+/* Desvanece elementos (apagar) */
 @keyframes off {
   100% {
     opacity: 0;
   }
 }
 
+/* Muestra elementos (encender) */
 @keyframes on {
   100% {
     opacity: 1;
   }
 }
 
+/* Cambia el color del logotipo */
 @keyframes logo {
   100% {
     color: #292929;
   }
 }
 
+/* Efecto de máquina de escribir (línea 1) */
 @keyframes type {
   0% {
     width: 0;
   }
 }
 
+/* Efecto de máquina de escribir (línea 2, con pausa intermedia) */
 @keyframes type2 {
   0% {
     width: 0;
@@ -203,6 +219,7 @@ body {
   }
 }
 
+/* Expansión progresiva del rectángulo del splash */
 @keyframes expand {
   0% {}
   25% {
@@ -211,7 +228,7 @@ body {
   }
   50% {
     clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 60vh, 45vw 60vh);
-    fill: #f5d300;
+    fill: #2B5537;
   }
   75% {
     clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 60vh, 0vw 100vh);
@@ -219,6 +236,6 @@ body {
   }
   100% {
     clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh);
-    fill: #f5d300;
+    fill: #2B5537;
   }
 }
