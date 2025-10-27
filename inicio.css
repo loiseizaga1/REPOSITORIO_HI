@@ -1,0 +1,308 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background: #e9ecef;
+}
+
+/* Fondo del mapa */
+.mapa-area {
+  height: 100vh;
+  background: url('mapait.png') center/cover no-repeat;
+  position: relative;
+}
+
+/* Sidebar flotante (inicialmente oculto) */
+.sidebar-flotante {
+  position: fixed;
+  top: 70px;
+  left: -250px; /* Oculto al inicio */
+  background-color: rgba(41, 74, 29, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 220px;
+  padding: 10px;
+  transition: all 0.4s ease;
+  z-index: 1050;
+}
+
+/* Sidebar visible */
+.sidebar-flotante.visible {
+  left: 20px;
+}
+
+/* Íconos en el sidebar */
+.iconos {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.iconos button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.iconos button.active {
+  color: #0d6efd;
+}
+
+/* Contenido dentro del sidebar */
+.contenido-lista {
+  display: none;
+}
+
+.contenido-lista.active {
+  display: block;
+}
+
+/* Barra superior */
+.navbar-custom {
+  background-color: #2d5734;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+/* Botones de iconos superiores */
+.navbar-custom .btn {
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 2px 10px;
+  width: 50%;
+  max-width: 600px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.search-bar .input-group-text {
+  border: none;
+  background: transparent;
+}
+
+/* Hover */
+#menu-btn:hover i {
+  color: #0d6efd;
+}
+
+.sidebar-flotante button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+/* Cuadro del logo (junto al icono de menú) */
+.logo-box {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 8px;
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen del logo */
+.logo-box .logo-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+/* Caja de notificaciones (oculta al inicio) */
+.notificacion-box {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 280px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: none;
+  z-index: 1100;
+  overflow: hidden;
+  animation: slideDown 0.3s ease;
+}
+
+/* Cabecera del cuadro */
+.notificacion-header {
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border-bottom: 1px solid #dee2e6;
+  font-weight: 600;
+}
+
+/* Animación */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo de íconos dentro de la lista */
+.notificacion-box i {
+  margin-right: 8px;
+  color: #2d5734;
+}
+
+/* Hover de cada item */
+.notificacion-box .list-group-item:hover {
+  background-color: #f1f3f4;
+  cursor: pointer;
+}
+/* Caja de notificaciones (oculta al inicio) */
+.notificacion-box {
+    position: fixed;
+  top: 50px;
+  right: 0;
+  width: 360px;
+  background-color: rgba(41, 74, 29, 0.823);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 1100;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  color: #fff;
+   padding: 10px;
+  z-index: 1050;
+margin-top: 1.2%;
+margin-right: 1%;
+
+
+}
+
+.notificacion-header {
+  background-color: rgba(41, 74, 29, 0.9);
+
+  padding: 10px 15px;
+  border-bottom: 1px solid #333;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Cada notificación individual */
+.notif-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.notif-item:hover {
+  background-color: rgb(41, 74, 29);
+ 
+}
+
+.notif-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.notif-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.notif-text .title {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.notif-text .time {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.notif-thumb {
+  width: 80px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Animación */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Estilo personalizado para el cajón modal (offcanvas) */
+.offcanvas.text-bg-dark {
+  background-color: rgba(41, 74, 29, 0.96);
+  color: #fff;
+}
+
+.offcanvas .offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.offcanvas .list-group-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+/* Cajón modal (offcanvas) personalizado */
+.offcanvas.text-bg-dark {
+  background-color: rgba(41, 74, 29, 0.95);
+  color: #fff;
+}
+
+.offcanvas .form-label {
+  color: #fff;
+}
+
+.offcanvas .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.offcanvas .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.offcanvas .form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 4px #28a745;
+}
+
+.offcanvas .btn-success {
+  background-color: #2d5734;
+  border: none;
+}
+
+.offcanvas .btn-success:hover {
+  background-color: #3c7a45;
+  transition: background 0.3s ease;
+}
