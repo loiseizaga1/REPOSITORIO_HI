@@ -1,0 +1,66 @@
+/* Fondo general */
+body {
+  background-image: url("itagui.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(37, 32, 32, 0.79);
+  background-blend-mode: lighten;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Caja principal */
+.caja-contraseña {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Encabezado con color verde */
+.encabezado {
+  background-color: #2B5537; /* verde oscuro */
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+/* Botón */
+.btn {
+  border-radius: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .caja-contraseña {
+    max-width: 320px;
+  }
+  .encabezado {
+    height: 80px;
+  }
+  .logo {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .caja-contraseña {
+    max-width: 270px;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+  }
+}
