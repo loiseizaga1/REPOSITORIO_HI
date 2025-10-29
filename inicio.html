@@ -38,6 +38,12 @@
   <div class="d-flex align-items-center">
   <button class="btn btn-light me-2" id="notificaciones-btn"><i class="bi bi-bell"></i></button>
 
+  <!-- Botón de registro -->
+  <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#registroModal">
+    Regístrate
+  </button>
+
+
 <!-- Caja de notificaciones (estilo YouTube) -->
 <div class="notificacion-box" id="notificacionBox">
   <div class="notificacion-header">Notificaciones</div>
@@ -146,6 +152,52 @@ document.addEventListener('click', (e) => {
 });
 
   </script>
+<!-- Modal de registro -->
+<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content registro-modal">
+
+      <!-- Encabezado -->
+      <div class="modal-header d-flex justify-content-center">
+        <img src="hi blanco.svg" alt="Logo" class="registro-logo">
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="modal-body text-center">
+        <h5 class="fw-bold mb-4">Crea tu cuenta</h5>
+
+        <form>
+          <!-- Correo electrónico -->
+          <div class="mb-3 text-start">
+            <label for="correo" class="form-label fw-semibold">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico" required>
+          </div>
+
+          <!-- Contraseña -->
+          <div class="mb-3 text-start">
+            <label for="password" class="form-label fw-semibold">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
+          </div>
+
+          <!-- Confirmar contraseña -->
+          <div class="mb-4 text-start">
+            <label for="confirmar" class="form-label fw-semibold">Confirmar contraseña</label>
+            <input type="password" class="form-control" id="confirmar" placeholder="Confirma tu contraseña" required>
+          </div>
+
+          <!-- Botón -->
+          <button type="submit" class="btn btn-success w-100 py-2">Registrarme</button>
+        </form>
+      </div>
+
+      <!-- Pie -->
+      <div class="modal-footer justify-content-center">
+        <small>¿Ya tienes una cuenta? <a href="#" class="text-success fw-semibold">Inicia sesión</a></small>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 </body>
 </html>
