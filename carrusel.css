@@ -1,0 +1,25 @@
+/* Estilos para el carrusel de Bootstrap personalizado */
+    /* Quita separación normal */
+    .card-header {
+      border-bottom: none;
+      transition: border-color 0.3s;
+      cursor: pointer;
+    }
+
+    /* Muestra borde solo cuando está activo (desplegado) */
+    .card-header.active {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    /* Estilo del texto del encabezado */
+    .header-title {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #212529;
+    }
+
+    /* Ícono */
+    .card-header i {
+      font-size: 1.2rem;
+    }
