@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pantalla</title>
+
+  <!-- Bootstrap CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="pantalla.css">
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- LEFT -->
+      <aside class="panel-left">
+        <div class="left-content">
+
+          <div class="photo-circle">
+            <i class="bi bi-person"></i>
+          </div>
+
+          <div class="username">Nombre de usuario</div>
+          <div class="email">correo electrónico</div>
+
+        </div>
+      </aside>
+
+      <!-- RIGHT -->
+      <main class="panel-right">
+
+        <div class="top-row">
+          <div class="top-circle"><i class="bi bi-house"></i></div>
+          <div class="top-circle"><i class="bi bi-geo-alt"></i></div>
+          <div class="top-circle"><i class="bi bi-calendar2-week"></i></div>
+        </div>
+
+        <span class="title-pill">Temáticas favoritas</span>
+
+        <div class="cards-grid">
+          <div class="theme-card">
+            <i class="bi bi-person-square"></i>
+            <div class="theme-label">Artes</div>
+          </div>
+
+          <div class="theme-card">
+            <i class="bi bi-film"></i>
+            <div class="theme-label">Concierto</div>
+          </div>
+
+          <div class="theme-card">
+            <i class="bi bi-shop"></i>
+            <div class="theme-label">Restaurante</div>
+          </div>
+
+          <div class="theme-card">
+            <i class="bi bi-music-note-beamed"></i>
+            <div class="theme-label">Jazz</div>
+          </div>
+
+          <div class="theme-card">
+            <i class="bi bi-people"></i>
+            <div class="theme-label">Salsa</div>
+          </div>
+
+          <div class="theme-card">
+            <i class="bi bi-lightning"></i>
+            <div class="theme-label">Rock</div>
+          </div>
+        </div>
+
+        <!-- PRIVACIDAD -->
+        <button class="privacidad-btn-principal">Privacidad</button>
+
+        <div class="privacy-wrap">
+          <button class="privacy-btn">Restaurar cronograma</button>
+          <button class="privacy-btn">Restaurar mapa</button>
+          <button class="privacy-btn">Lugares visitados</button>
+          <button class="privacy-btn">Cerrar sesión</button>
+        </div>
+
+        <!-- ✅ Botones derecha accesibilidad -->
+        <nav class="access-bar">
+          <button class="access-btn"><i class="bi bi-info-circle"></i></button>
+          <button class="access-btn"><i class="bi bi-brightness-high"></i></button>
+          <button class="access-btn"><i class="bi bi-volume-up"></i></button>
+          <button class="access-btn"><i class="bi bi-type"></i></button>
+          <button class="access-btn"><i class="bi bi-fonts"></i></button>
+          <button class="access-btn"><i class="bi bi-translate"></i></button>
+          <button class="access-btn"><i class="bi bi-contrast"></i></button>
+        </nav>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>
