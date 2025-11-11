@@ -408,3 +408,47 @@ margin-right: 1%;
 .registro-modal .form-label {
   color: #000 !important; /* Color negro para las etiquetas */
 }
+/* Mapa al fondo e interactivo */
+#map {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Barra fija arriba */
+.navbar-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Sidebar encima del mapa */
+.sidebar-flotante {
+  position: fixed;
+  top: 80px;
+  left: -250px;
+  z-index: 900;
+  transition: all 0.3s ease;
+}
+.sidebar-flotante.visible {
+  left: 20px;
+}
+
+/* Modales y notificaciones encima de todo */
+.modal,
+.notificacion-box {
+  z-index: 2000 !important;
+}
+
+/* Ajustes generales */
+body {
+  margin: 0;
+  background: none;
+  overflow: hidden;
+}
+
