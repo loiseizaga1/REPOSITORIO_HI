@@ -1,0 +1,223 @@
+:root{
+  --green:#2d5734;
+  --white:#ffffff;
+}
+
+/* GENERAL */
+body{
+  background:var(--white);
+  font-family: Inter, Arial, sans-serif;
+}
+
+.wrap{
+  max-width:1200px;
+  margin:28px auto;
+}
+.layout{
+  display:flex;
+  justify-content:center;
+  width:100%;
+  gap:40px;
+}
+
+/* ✅ Sidebar izquierda centrado */
+.panel-left{
+  width:32%;
+  background:var(--white);
+  padding:60px 30px;
+  border-right:2px solid #bfbfbf;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.left-content{
+  text-align:center;
+}
+
+/* ✅ Foto de perfil centrada y corregida */
+.photo-circle{
+  width:210px;height:210px;
+  border-radius:50%;
+  border:3px solid var(--green);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+}
+.photo-circle i{
+  font-size:95px;
+  color:var(--green);
+}
+
+.username,.email{
+  font-size:18px;
+  font-weight:600;
+  color:var(--green);
+  margin-top:10px;
+}
+
+/* PANEL DERECHO (se mantiene la barra derecha ✅) */
+.panel-right{
+  width:68%;
+  padding:40px 30px;
+  background:var(--white);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* ICONOS DE ARRIBA */
+.top-row{
+  display:flex;
+  justify-content:center;
+  width:100%;
+  gap:35px;
+  margin-top:30px;
+  margin-bottom:25px;
+}
+.top-circle{
+  width:70px;height:70px;
+  background:white;
+  border:2px solid var(--green);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  color:var(--green);
+  transition:.3s;
+}
+.top-circle:hover{
+  background:var(--green);
+  color:white;
+  transform:scale(1.1);
+}
+
+/* TÍTULO */
+.title-pill{
+  border:2px solid var(--green);
+  border-radius:12px;
+  padding:10px 20px;
+  font-weight:700;
+  font-size:20px;
+  color:var(--green);
+  margin-bottom:25px;
+}
+
+/* ✅ HOVER DEL TÍTULO AGREGADO */
+.title-pill:hover{
+  background:var(--green);
+  color:white;
+  transform:scale(1.05);
+  transition:.3s;
+}
+
+/* TARJETAS */
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+  max-width:600px;
+  width:100%;
+}
+.theme-card{
+  width:160px;height:160px;
+  background:var(--green);
+  border-radius:14px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  transition:.3s;
+}
+.theme-card i,.theme-label{
+  color:white;
+}
+.theme-card i{font-size:46px;}
+.theme-card:hover{
+  transform:scale(1.08);
+  box-shadow:0 10px 22px rgba(0,0,0,0.28);
+}
+
+/* BOTONES */
+.privacidad-btn-principal{
+  width:230px;height:50px;
+  margin:25px 0 20px;
+  border-radius:30px;
+  border:2px solid var(--green);
+  background:white;
+  color:var(--green);
+  font-size:18px;
+  font-weight:700;
+  transition:.3s;
+}
+.privacidad-btn-principal:hover{
+  background:var(--green);
+  color:white;
+}
+
+.privacy-wrap{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+.privacy-btn{
+  width:340px;
+  border:2px solid var(--green);
+  border-radius:14px;
+  background:white;
+  color:var(--green);
+  padding:12px;
+  transition:.3s;
+}
+.privacy-btn:hover{
+  background:var(--green);
+  color:white;
+  transform:translateY(-4px);
+}
+
+/* RESPONSIVE */
+@media(max-width:991px){
+  .layout{flex-direction:column;}
+  .panel-left{width:100%;border-right:none;border-bottom:2px solid #bfbfbf;}
+  .panel-right{width:100%;}
+  .cards-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+  .cards-grid{grid-template-columns:1fr;}
+}
+
+/* ✅ Botones derecha accesibilidad */
+.access-bar{
+  position:fixed;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:99;
+}
+
+.access-btn{
+  width:50px;
+  height:40px;
+  border:none;
+  border-radius:12px;
+  background:white;
+  color:var(--green);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  font-size:22px;
+  transition:.3s;
+}
+
+.access-btn:hover{
+  background:var(--green);
+  color:white;
+  transform:scale(1.1);
+}

@@ -1,6 +1,7 @@
 /* ===============================
    🎨 CONFIGURACIÓN GENERAL
    =============================== */
+
 body {
   background-color: #191919; /* Fondo oscuro principal */
   font-family:  "Lexend", sans-serif;
@@ -8,7 +9,6 @@ body {
   font-weight: 600;
   font-style: normal; /* Fuente base */
 }
-
 /* ===============================
    ✨ TEXTO CENTRAL Y ANIMACIONES
    =============================== */
