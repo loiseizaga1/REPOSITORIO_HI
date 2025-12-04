@@ -101,7 +101,13 @@ html {
     background: url('mapait.png') center/cover no-repeat;
     position: relative;
 }
-
+.logo-footer img {
+   position: relative;
+  width: 20%;
+  height: auto;     /* Ajusta el alto que desees */
+  margin: auto;
+ margin-left: 145%;
+}
 /* Sidebar flotante */
 .sidebar-flotante {
   position: fixed;      /* Se superpone */
